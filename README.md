@@ -8,23 +8,23 @@ Instructions:
 Step 1: Build the Project to Generate the Binary
 
 Step 2: Enable OpenOCD in Debugger Configuration
-	 Right click project -> Select Debug Configuration -> Go to "Debugger" tab -> Navigation "Debug probe" -> Select "ST link Open OCD "
-	 ![alt text](image.png)
+	Right click project -> Select Debug Configuration -> Go to "Debugger" tab -> Navigation "Debug probe" -> Select "ST link Open OCD "
+ 	![alt text](image.png)
 
 Step 3: Add Semihosting Run Command
 	In the Debug Configurations window, go to the Startup tab.
-	Locate " Run Command " Section
-	Add command " monitor arm semihosting enable "
-	![alt text](image-1.png)
+ 	Locate " Run Command " Section
+  	Add command " monitor arm semihosting enable "
+![alt text](image-1.png)
 
 Step 4: Add Linker Flags for Semihosting
 	1. Right-click on your project in Project Explorer.
-	2. Navigate to Properties > C/C++ Build > Settings.
-	3. Under MCU GCC Linker > Miscellaneous, add the following flags:
-		"-specs=rdimon.specs -lc -lrdimon"
-	![alt text](image.png)
+ 	2. Navigate to Properties > C/C++ Build > Settings.
+  	3. Under MCU GCC Linker > Miscellaneous, add the following flags:
+   		"-specs=rdimon.specs -lc -lrdimon"
+![alt text](image.png)
 
-Step 5: Modify main.c to Enable Semihosting
+Step 5: Modify main.c to Enable Semihosting.
 Open main.c and add the necessary function declarations.
 Modify main.c as follows:
 
@@ -57,7 +57,7 @@ How to exclude it?
 	3. Tick both Debug and Release configurations.
 	4. Click OK.
 
-	![alt text](image-2.png)
+![alt text](image-2.png)
 
 
 Note:
